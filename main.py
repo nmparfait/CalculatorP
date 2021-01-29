@@ -34,31 +34,31 @@ n1 = int(input("What is the first number?: "))
 for symbol in operations:
   print(symbol)
 
-#operations symbol 
-operation_symbol = input("Pick an operation from the line above:")
+should_continue = True
 
-#getting the second number
-n2 = int(input("What is the second number?: "))
+while should_continue:
+    
+  #operations symbol 
+  operation_symbol = input("Pick an operation from the line above:")
 
-calculation_function = operations[operation_symbol]
-first_answer = calculation_function(n1, n2)
+  #getting the second number
+  n2 = int(input("What is the second number?: "))
 
-
-print(f"{n1} {operation_symbol} {n2} = {first_answer}" )
-
-#making another operation
-operation_symbol = input("Pick another operation:")
-
-n3 = int(input("What is the next number?: "))
+  calculation_function = operations[operation_symbol]
+  answer = calculation_function(n1, n2)
 
 
-operation_symbol = input("Pick an operation from the line above: ")
-calculation_function = operations[operation_symbol]
+  print(f"{n1} {operation_symbol} {n2} = {answer}" )
 
-second_answer = calculation_function(calculation_function(n1, n2), n3)
+  #making another operation
+  operation_symbol = input("Pick another operation:")
 
-print(f"{first_answer} {operation_symbol} {n3} = {second_answer}" )
+  
 
+  if input(f"Type 'y' to continue calculating with {answer} or type 'no' to exit: ") == "y":
+    n1 == answer
+  else:
+    should_continue = False
 
 
 
