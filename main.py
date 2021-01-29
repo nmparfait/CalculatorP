@@ -41,10 +41,24 @@ operation_symbol = input("Pick an operation from the line above:")
 n2 = int(input("What is the second number?: "))
 
 calculation_function = operations[operation_symbol]
-answer = calculation_function(n1, n2)
+first_answer = calculation_function(n1, n2)
 
 
-print(f"{n1} {operation_symbol} {n2} = {answer}" )
+print(f"{n1} {operation_symbol} {n2} = {first_answer}" )
+
+#making another operation
+operation_symbol = input("Pick another operation:")
+
+n3 = int(input("What is the next number?: "))
+
+
+operation_symbol = input("Pick an operation from the line above: ")
+calculation_function = operations[operation_symbol]
+
+second_answer = calculation_function(calculation_function(n1, n2), n3)
+
+print(f"{first_answer} {operation_symbol} {n3} = {second_answer}" )
+
 
 
 
