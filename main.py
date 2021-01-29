@@ -27,8 +27,8 @@ operations = {
   "/": division
 }
 
+#getting the first number
 n1 = int(input("What is the first number?: "))
-n2 = int(input("What is the second number?: "))
 
 #loop through the dictionnary
 for symbol in operations:
@@ -36,6 +36,9 @@ for symbol in operations:
 
 #operations symbol 
 operation_symbol = input("Pick an operation from the line above:")
+
+#getting the second number
+n2 = int(input("What is the second number?: "))
 
 calculation_function = operations[operation_symbol]
 answer = calculation_function(n1, n2)
