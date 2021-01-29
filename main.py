@@ -1,4 +1,5 @@
-
+from art import logo 
+print(logo)
 
 #some functions of our project
 
